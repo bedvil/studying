@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { LoaderDirective } from './loader/loader.directive';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoaderDirective,
+    LoaderComponent
   ],
   imports: [
     BrowserModule
+  ],
+  entryComponents: [
+    LoaderComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
