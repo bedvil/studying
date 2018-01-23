@@ -4,6 +4,7 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/finally';
 import 'rxjs/add/operator/do';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +15,14 @@ export class AppComponent {
   title = '';
   loading = true;
 
-  constructor() {
+  constructor(
+    private http: HttpClient
+  ) {
     this.getTitle().subscribe(title => this.title = title)
    }
 
   getTitle() {
+    this.http.get('a').subscribe(console.log);
     return Observable
     .of('app')
     .delay(1000)

@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-
-  mudavalor() {
-    this.title += 'a';
-  }
 }

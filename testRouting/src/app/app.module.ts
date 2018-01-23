@@ -3,14 +3,14 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { AnomaliesComponent } from './anomalies/anomalies.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AComponent } from './a/a.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AComponent
+    AnomaliesComponent
   ],
   imports: [
     BrowserModule,

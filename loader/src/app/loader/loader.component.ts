@@ -1,16 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ViewContainerRef } from '@angular/core/src/linker/view_container_ref';
 
 @Component({
   selector: 'app-loader',
-  template: '<h1 *ngIf="!hidden">Funcionou</h1>'
+  templateUrl: './loader.component.html',
+  styleUrls: ['./loader.component.css']
 })
-export class LoaderComponent implements OnInit {
+export class LoaderComponent {
 
-  @Input() hidden = true;
+  @Input() loading;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AComponent } from './a/a.component';
+import { AnomaliesComponent } from './anomalies/anomalies.component';
 
 
 const routes: Routes = [
   {
     path: 'test',
-    component: AComponent
+    component: AnomaliesComponent
   },
   {
     path: '',
@@ -25,4 +25,4 @@ const routes: Routes = [
   ]
 })
 
-export class AppRoutingModule { }
+export class AppRoutingModule {}

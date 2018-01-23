@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/from';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-a',
@@ -7,7 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AComponent implements OnInit {
 
+  @Input()
+  set teste(teste) {
+    console.log(teste);
+  }
+
   ngOnInit() {
+    
   }
 
 }
