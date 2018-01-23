@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ViewContainerRef } from '@angular/core/src/linker/view_container_ref';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-loader',
@@ -8,8 +7,14 @@ import { ViewContainerRef } from '@angular/core/src/linker/view_container_ref';
 })
 export class LoaderComponent {
 
-  @Input() loading;
+  loading;
 
-  constructor() { }
+  constructor(
+    private elementRef: ElementRef
+  ) { }
+
+  getElementRef() {
+    return this.elementRef;
+  }
 
 }
